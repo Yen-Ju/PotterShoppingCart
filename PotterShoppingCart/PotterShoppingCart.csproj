@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="DiscountMethod.cs" />
     <Compile Include="EightyPercentOff.cs" />
+    <Compile Include="SeventyFivePercentOff.cs" />
     <Compile Include="NinetyPercentOff.cs" />
     <Compile Include="NinetyFivePercentOff.cs" />
     <Compile Include="NoDiscount.cs" />
