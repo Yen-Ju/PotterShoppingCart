@@ -44,6 +44,7 @@ namespace PotterShoppingCart
         VOL_1,
         VOL_2,
         VOL_3,
-        VOL_4
+        VOL_4,
+        VOL_5
     }
 }
