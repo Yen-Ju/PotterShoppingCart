@@ -203,5 +203,37 @@ namespace PotterShoppingCart.Tests
             //assert
             Assert.AreEqual(expectedCost, actualCost);
         }
-    }
+        [TestMethod]
+        public void Buy_1_Vol_1_and_2_Vol_2_and_2_Vol_3_Cost_460()
+        {
+            //arrange
+            var target = new PotterShoppingCart();
+            var shoppingCartItem1 = new PotterShoppingCartItem()
+            {
+                Volumn = HarryPotter.VOL_1,
+                Quantity = 1
+            };
+            var shoppingCartItem2 = new PotterShoppingCartItem()
+            {
+                Volumn = HarryPotter.VOL_2,
+                Quantity = 2
+            };
+            var shoppingCartItem3 = new PotterShoppingCartItem()
+            {
+                Volumn = HarryPotter.VOL_3,
+                Quantity = 2
+            };
+            var expectedCost = 460;
+
+            //act
+            int actualCost;
+            target.AddToCart(shoppingCartItem1);
+            target.AddToCart(shoppingCartItem2);
+            target.AddToCart(shoppingCartItem3);
+            actualCost = target.CheckOut();
+
+            //assert
+            Assert.AreEqual(expectedCost, actualCost);
+        }
+    }    
 }
