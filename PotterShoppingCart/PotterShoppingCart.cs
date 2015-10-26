@@ -16,21 +16,42 @@ namespace PotterShoppingCart
 
         public int CheckOut()
         {
-            return FindDiscountMethod().Checkout();
+            int totalCost = 0;
+            while (cartItemsList.Count > 0)
+            {
+                totalCost += FindBestDiscountMethod().Checkout();
+            }
+            return totalCost;
         }
 
-        private DiscountMethod FindDiscountMethod()
+        private DiscountMethod FindBestDiscountMethod()
         {
-            if (cartItemsList.Count == 1)
-                return new NoDiscount(cartItemsList);
-            else if (cartItemsList.Count == 2)
-                return new NinetyFivePercentOff(cartItemsList);
-            else if (cartItemsList.Count == 3)
-                return new NinetyPercentOff(cartItemsList);
-            else if (cartItemsList.Count == 4)
-                return new EightyPercentOff(cartItemsList);
+            var bestPackage =  FoundBestPackage();
+            if (bestPackage.Count == 1)
+                return new NoDiscount(bestPackage);
+            else if (bestPackage.Count == 2)
+                return new NinetyFivePercentOff(bestPackage);
+            else if (bestPackage.Count == 3)
+                return new NinetyPercentOff(bestPackage);
+            else if (bestPackage.Count == 4)
+                return new EightyPercentOff(bestPackage);
             else
-                return new SeventyFivePercentOff(cartItemsList);
+                return new SeventyFivePercentOff(bestPackage);
+        }
+
+        private List<PotterShoppingCartItem> FoundBestPackage()
+        {
+            List<PotterShoppingCartItem> bestPackage = new List<PotterShoppingCartItem>();
+            foreach (PotterShoppingCartItem cartItem in cartItemsList)
+            {
+                bestPackage.Add(new PotterShoppingCartItem() {
+                    Volumn = cartItem.Volumn,
+                    Quantity = 1
+                });
+                cartItem.Quantity -= 1;
+            }
+            cartItemsList.RemoveAll(item => item.Quantity == 0);
+            return bestPackage;
         }
     }
 
