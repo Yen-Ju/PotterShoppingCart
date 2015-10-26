@@ -1,0 +1,7 @@
+D:\day2-lab-source\day2-homework\PotterShoppingCart\PotterShoppingCart.Tests\bin\Debug\PotterShoppingCart.Tests.dll
+D:\day2-lab-source\day2-homework\PotterShoppingCart\PotterShoppingCart.Tests\bin\Debug\PotterShoppingCart.Tests.pdb
+D:\day2-lab-source\day2-homework\PotterShoppingCart\PotterShoppingCart.Tests\bin\Debug\PotterShoppingCart.dll
+D:\day2-lab-source\day2-homework\PotterShoppingCart\PotterShoppingCart.Tests\bin\Debug\PotterShoppingCart.pdb
+D:\day2-lab-source\day2-homework\PotterShoppingCart\PotterShoppingCart.Tests\obj\Debug\PotterShoppingCart.Tests.csprojResolveAssemblyReference.cache
+D:\day2-lab-source\day2-homework\PotterShoppingCart\PotterShoppingCart.Tests\obj\Debug\PotterShoppingCart.Tests.dll
+D:\day2-lab-source\day2-homework\PotterShoppingCart\PotterShoppingCart.Tests\obj\Debug\PotterShoppingCart.Tests.pdb
