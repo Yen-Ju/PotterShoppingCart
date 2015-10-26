@@ -2,18 +2,16 @@
 
 namespace PotterShoppingCart
 {
-    internal class NinetyFivePercentOff : NoDiscount
+    internal class NinetyPercentOff : NoDiscount
     {
-        private List<PotterShoppingCartItem> cartItemsList;
-
-        public NinetyFivePercentOff(List<PotterShoppingCartItem> cartItemsList) 
+        public NinetyPercentOff(List<PotterShoppingCartItem> cartItemsList)
             : base(cartItemsList)
         {
         }
 
         public override int Checkout()
         {
-            return base.Checkout() * 95 / 100;
+            return base.Checkout() * 90 / 100;
         }
     }
 }

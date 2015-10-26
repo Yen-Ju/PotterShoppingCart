@@ -25,8 +25,10 @@ namespace PotterShoppingCart
                 return new NoDiscount(cartItemsList);
             else if (cartItemsList.Count == 2)
                 return new NinetyFivePercentOff(cartItemsList);
-            else
+            else if (cartItemsList.Count == 3)
                 return new NinetyPercentOff(cartItemsList);
+            else
+                return new EightyPercentOff(cartItemsList);
         }
     }
 
