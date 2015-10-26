@@ -32,6 +32,7 @@ namespace PotterShoppingCart
 
     public enum HarryPotter
     {
-        VOL_1
+        VOL_1,
+        VOL_2
     }
 }
