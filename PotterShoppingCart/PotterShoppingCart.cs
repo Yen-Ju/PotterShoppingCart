@@ -16,6 +16,17 @@ namespace PotterShoppingCart
 
         public int CheckOut()
         {
+            return cartItemsList.Count == 1?
+                CheckOutByOriginalPrice() : CheckOutBy95PercentOff();
+        }
+
+        private int CheckOutBy95PercentOff()
+        {
+            return CheckOutByOriginalPrice() * 95 / 100;
+        }
+
+        private int CheckOutByOriginalPrice()
+        {
             int totalCost = 0;
             foreach (PotterShoppingCartItem item in cartItemsList)
                 totalCost += item.Quantity * item.Price;
