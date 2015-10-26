@@ -39,6 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DiscountMethod.cs" />
+    <Compile Include="NinetyPercentOff.cs" />
+    <Compile Include="NinetyFivePercentOff.cs" />
+    <Compile Include="NoDiscount.cs" />
     <Compile Include="PotterShoppingCart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
